@@ -37,6 +37,10 @@ def authenticate_with_api_key(api_key_string: str) -> None:
         content=text, type_=language_v1.Document.Type.PLAIN_TEXT
     )
 
+    # sentiment = client.analyze_sentiment(
+    #   request={"document": document}
+    # ).document_sentiment
+
     # Make a request to analyze the sentiment of the text.
     sentiment = client.analyze_sentiment(
         request={"document": document}
